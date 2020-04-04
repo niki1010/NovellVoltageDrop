@@ -19,7 +19,7 @@ label start:
 
     show mi_3_serious 
     
-    m "тестик"
+    m "Test"
 
     screen imagemap:
      imagemap:
