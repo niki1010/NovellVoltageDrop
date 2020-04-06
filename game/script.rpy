@@ -63,19 +63,15 @@ label start:
 # Но я чет не очень понимаю, как это работает
 
 init animation:
-     A=1
-     def Ani_1:
-	 dd=Dissolve(.5, alpha=True)
-	     $while A!=0:	 
-		     show neko1
-			 show neko2
-             show neko3
-             show neko4
-             show neko5
-			 return()
-#НЕ правильно, но это покадровая анимация
-#Если понял, что то из статьи то расскажи мне 
-
+     def Ani:
+         for i in range(img_name, frames=0, delay=.1, loop=True, reverse=False, effect=dd, start=1, ext="png", **properties)
+          args=[]
+          for i in range (starts, strats  + frame ):
+               args.append(renpy.display.im.image(img_name + str(i) + "." + ext))
+             if reverse or loop or (i < start + frames - 1):
+                args.append(delay)
+                args.append(effect)
+    return anim.TransitionAnimation(*args, **properties)  
 
 
 
